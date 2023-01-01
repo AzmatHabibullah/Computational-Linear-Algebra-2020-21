@@ -1,0 +1,42 @@
+﻿FOR j=1 TO n
+    vj←aj
+    FOR i=1 TO j−1
+        rij←q∗iaj
+        vj←vj−rijqi
+    END FOR
+    rjj←|vj|
+    qj←vj/rjj
+END FOR
+
+
+FOR j=1 TO n
+    FOR i=1 TO j−1
+        rij←q∗iaj
+        newAj←newAj−rijqi
+    END FOR
+    rjj←|newAj|
+    qj←newAj/rjj
+END FOR
+
+modified
+
+FOR i=1 TO n
+    vi←ai
+END FOR
+FOR i=1 TO n
+    rii←∥vi∥2
+    qi=vi/rii
+    FOR j=i+1 TO n
+        rij←q∗iaj
+        vj←vj−rijqi
+    END FOR
+END FOR
+
+
+FOR k=1 TO n
+    x=Ak:m,k
+    vk←sign(x1)∥x∥2e1+x
+    vk←vk/∥vk∥
+    Ak:m,k:n←Ak:m,k:m−2vk(v∗kAk:m,k:n)
+END FOR
+

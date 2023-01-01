@@ -1,0 +1,24 @@
+[1mdiff --git a/cla_utils/exercises1.py b/cla_utils/exercises1.py[m
+[1mindex e4571fc..85f1a96 100644[m
+[1m--- a/cla_utils/exercises1.py[m
+[1m+++ b/cla_utils/exercises1.py[m
+[36m@@ -22,11 +22,14 @@[m [mdef basic_matvec(A, x):[m
+     :return b: m-dimensional numpy array[m
+     """[m
+ [m
+[31m-    print("hello world")[m
+[31m-    print("this is a branch")[m
+[31m-[m
+[31m-    raise NotImplementedError[m
+[31m-[m
+[32m+[m[32m    print("Implementing the standard definition b_i = sum j = 1^n a_ij x_j")[m
+[32m+[m[32m    dims = A.shape[m
+[32m+[m[32m    print(dims)[m
+[32m+[m[32m    b = np.zeros(dims[0])[m
+[32m+[m[32m    for i in range(dims[0]):[m
+[32m+[m[32m        for j in range(dims[1]):[m
+[32m+[m[32m            b[i] = b[i] + A[i][j]*x[j][m
+[32m+[m[32m    return b[m
+ [m
+ def column_matvec(A, x):[m
+     """[m
